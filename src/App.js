@@ -16,19 +16,19 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
-        <HashRouter>
-          <div>
-            <Navbar/>
-            <Switch>
-              <Route exact path = '/' component={Landing}/>
-              <Route path = '/cart' component={Cart}/>
-              <Route path = '/chameleons/:id' component={ChameleonView}/>
-            </Switch>
-          </div>
-        </HashRouter>
-        <Footer/>
-      </div>
+      <HashRouter>
+        <div className="App">
+            <div>
+              <Navbar/>
+              <Switch>
+                <Route exact path = '/' component={Landing}/>
+                <Route path = '/cart' component={Cart}/>
+                <Route path = '/chameleons/:id' component={ChameleonView}/>
+              </Switch>
+            </div>
+          <Footer/>
+        </div>
+      </HashRouter>
     );
   }
 }

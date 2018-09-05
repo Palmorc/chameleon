@@ -60,6 +60,6 @@ export function getItems(){
 export function getOne(id){
   return{
     type: GET_ONE,
-    payload: axios.get(`/api/items/${id}`)
+    payload: axios.get(`/api/chameleons/${id}`)
   }
 }

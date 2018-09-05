@@ -27,6 +27,8 @@ app.use(session({
 }))
 
 
+
+
 //ENDPOINTS BELOW
 app.get('/auth/callback', ac.auth)
 app.get('/api/currentuser', (req,res)=>{

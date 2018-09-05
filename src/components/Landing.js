@@ -10,16 +10,15 @@ class Landing extends Component{
   }
 
   render(){
-    console.log(this.props.items);
+    console.log(this.props.match.params.id);
     return(
       <div>
         {this.props.items.map(items => {
           return(
             <div key={items.id} className='chameleonLandingItems'>
               <Link to={`/chameleons/${items.id}`}><h1>{items.species}</h1></Link>
-              <p><b>{items.color}</b></p>
               <p>${items.price}</p>
-              <img src={items.imgurl} alt=''/>
+              <Link to={`/chameleons/${items.id}`}><img src={items.imgurl} alt=''/></Link>
             </div>
           )
         })}
