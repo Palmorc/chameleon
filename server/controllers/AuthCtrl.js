@@ -1,9 +1,11 @@
-const axios=require('axios')
+const axios = require('axios')
 
 module.exports = {
-  auth: async (req,res) => {
+  auth: async (req, res) => {
     try {
-      let { code } = req.query
+      let {
+        code
+      } = req.query
       let payload = {
         client_id: process.env.REACT_APP_AUTH0_CLIENT_ID,
         client_secret: process.env.AUTH0_CLIENT_SECRET,
@@ -18,15 +20,15 @@ module.exports = {
 
       let userInfoResponse = await axios.get(`${auth0Domain}/userinfo?access_token=${accessToken}`)
       let userInfo = userInfoResponse.data
-      console.log('!!!*********USER INFO**********!!!',userInfo);
+      console.log('!!!*********USER INFO**********!!!', userInfo);
 
       let db = req.app.get('db')
       let users = await db.findUser(userInfo.sub)
 
-      if(users.length){
+      if (users.length) {
         req.session.user = users[0]
         res.redirect('/')
-      } else{
+      } else {
         let users = await db.createUser(userInfo)
         req.session.user = users[0]
         res.redirect('/')

@@ -1,5 +1,5 @@
 module.exports = {
-  getItems: async(req,res) => {
+  getItems: async (req, res) => {
     try {
       let db = req.app.get('db')
       let items = await db.getAllItems()
@@ -10,7 +10,7 @@ module.exports = {
     }
   },
 
-  getOne: async(req,res) => {
+  getOne: async (req, res) => {
     try {
       let db = req.app.get('db')
       let item = await db.getOneItem(req.params.id)
