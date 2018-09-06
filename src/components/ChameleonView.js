@@ -19,6 +19,7 @@ class ChameleonView extends Component{
                 <h1 className='chameleonSpecies'>{item.species}</h1>
                 <p className='chameleonPrice'><b><i>${item.price}</i></b></p>
                 <p className='chameleonInfo'>{item.info}</p>
+                <button>Add to Cart</button>
               </div>
               <img src={item.imgurl}/>
             </div>

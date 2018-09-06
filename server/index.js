@@ -40,6 +40,12 @@ app.get('/api/logout', (req,res)=>{
 })
 app.get('/api/chameleons', sc.getItems)
 app.get('/api/chameleons/:id', sc.getOne)
+app.get('/api/cart', cc.getCart)
+app.post('/api/cart', cc.addItem)
+app.delete('/api/cart/delete', cc.removeItem)
+app.put('/api/cart/add',cc.plusItem)
+app.put('/api/cart/remove',cc.minusItem)
+
 //ENDPOINTS ABOVE
 
 app.listen(port, () => {
