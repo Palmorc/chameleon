@@ -10,7 +10,6 @@ class Landing extends Component{
   }
 
   render(){
-    console.log(this.props.match.params.id);
     return(
       <div>
         {this.props.items.map(items => {

@@ -1,2 +1,2 @@
-select * from chameleons
+SELECT * FROM chameleons
 WHERE id = $1;

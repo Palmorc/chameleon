@@ -11,11 +11,9 @@ module.exports = {
         grant_type: 'authorization_code',
         redirect_uri: `http://${req.headers.host}/auth/callback`
       }
-      console.log(payload)
       let auth0Domain = `https://${process.env.REACT_APP_AUTH0_DOMAIN}`
 
       let accessTokenResponse = await axios.post(`${auth0Domain}/oauth/token`, payload)
-      console.log(accessTokenResponse)
       let accessToken = accessTokenResponse.data.access_token
 
       let userInfoResponse = await axios.get(`${auth0Domain}/userinfo?access_token=${accessToken}`)
