@@ -1,14 +1,15 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
-import {getUser, logout} from '../redux/reducers/reducer'
+import {getUser, logout, getCart} from '../redux/reducers/reducer'
 
 var loggedIn = null
 
 class Navbar extends Component {
 
   componentDidMount() {
-    this.props.getUser()
+    this.props.getUser(),
+    this.props.getCart()
   }
 
   checkLoggedIn(props) {
@@ -19,6 +20,14 @@ class Navbar extends Component {
       return 'LOGOUT'
     } else if (loggedIn === 0) {
       return 'LOGIN'
+    }
+  }
+
+  cartCount = () => {
+    if (!this.props.cart.length){
+      return null
+    } else {
+      return '+' + this.props.cart.length
     }
   }
 
@@ -36,15 +45,25 @@ class Navbar extends Component {
     }
   }
 
+
+  
+
   render() {
-    return (<div>
-      <button onClick={this.login}>{this.checkLoggedIn()}</button>
+    return (
+    <div className='navbar'>
+      <Link to='/'><img src={require('../images/logo.png')} alt = '' height='100' width='100' className='logo'/></Link>
+      <h1 className='navName'>Chameleon</h1>
+      <div className='navButtons'>
+        <button onClick={this.login} className='navLogin'>{this.checkLoggedIn()}</button>
+        <Link to='/cart'><button className='navCart'>CART {this.cartCount()}</button></Link>
+      </div>
     </div>)
   }
 }
 
 let mapStateToProps = state => {
-  return {user: state.userData}
+  return {user : state.userData,
+          cart : state.cart}
 }
 
-export default connect(mapStateToProps, {getUser, logout})(Navbar)
+export default connect(mapStateToProps, {getUser, logout, getCart})(Navbar)

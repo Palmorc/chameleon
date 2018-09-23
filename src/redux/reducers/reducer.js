@@ -68,11 +68,11 @@ export default function reducer(state = initialState, action) {
       return { ...state,
         cart: action.payload.data
       }
-    case PLUS_ITEM:
+    case PLUS_ITEM_FULFILLED:
       return { ...state,
         cart: action.payload.data
       }
-    case MINUS_ITEM:
+    case MINUS_ITEM_FULFILLED:
       return { ...state,
         cart: action.payload.data
       }

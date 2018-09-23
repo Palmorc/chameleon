@@ -16,13 +16,15 @@ class Cart extends Component {
   }
 
   render() {
+    console.log(this.props.cart[0]);
+    
     return (<div className='cart'>
       {
         this.props.cart.length
           ? this.props.cart.map(item => {
             return (<div key={item.id}>
               <h1>{item.species}</h1>
-              <p>x{item.quantity}</p>
+              <div>x{item.quantity}</div>
               <img src={item.imgurl} alt=''/>
               <p>${item.price}</p>
                 <button onClick={()=>this.props.plusItem(item)}>+</button>

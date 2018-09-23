@@ -8,7 +8,7 @@ import {HashRouter, Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {getUser} from './redux/reducers/reducer'
 
-import './App.css';
+import './sylesheets/styles.css';
 
 class App extends Component {
   componentDidMount(){

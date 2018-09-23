@@ -1,0 +1,62 @@
+$red : #DA2C38;
+$darkgreen : #226F54;
+$lightgreen : #87C38F;
+$offwhite : #F4F0BB;
+$brown : #43291F;
+$josefin : 'Josefin Sans';
+$josefinSerif : 'Josefin Slab';
+
+body{
+    max-width: 100%;
+    background-image: url('../images/bg.jpg') ;
+    overflow-x: hidden;
+}
+//Navbar
+.navbar{
+    overflow-x: hidden;
+    align-items: center;
+    display: flex; 
+    justify-content: flex-end;
+    position: sticky;
+    top:0;
+    width: 100vw;
+    height: 5%;
+    max-height: 100px;
+    background-color: $offwhite;
+    padding: 10px;
+    .navName{
+        color: $darkgreen;
+        border: 5px solid $offwhite;
+        margin-right:auto;
+        font-family: $josefin;
+    }
+    .logo{
+        margin-right:auto;
+        transition: all .2s ease-in-out;
+    }
+    .navLogin, .navCart{
+        font-family: $josefin;
+        font-size: 40px;
+        width: 150px;
+        height: 125px;
+        border: none;
+        background-color: #F4F0BB;
+        color: $lightgreen;
+        margin: 50px;
+        margin-top: 0px;
+        margin-bottom:0px;
+    }
+    .navLogin:hover , .navCart:hover{
+        color : white;
+    }
+    .logo:hover{
+        transform: scale(1.1);
+    }
+}
+
+//Landing
+
+
+
+
+
