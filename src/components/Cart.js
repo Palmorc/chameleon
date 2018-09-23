@@ -22,14 +22,14 @@ class Cart extends Component {
       {
         this.props.cart.length
           ? this.props.cart.map(item => {
-            return (<div key={item.id}>
-              <h1>{item.species}</h1>
-              <div>x{item.quantity}</div>
-              <img src={item.imgurl} alt=''/>
-              <p>${item.price}</p>
-                <button onClick={()=>this.props.plusItem(item)}>+</button>
-                <button onClick={()=>this.props.minusItem(item)}>-</button>
-                <button onClick={()=>this.props.removeItem(item.id)}>REMOVE</button>
+            return (<div key={item.id} className='cartInfoContainer'>
+              <h1 className='cartSpecies'>{item.species}</h1>
+              <div className='cartQuantity'>x{item.quantity}</div>
+              <img src={item.imgurl} alt='' className = 'cartImage'/>
+              <p className='cartPrice'>${item.price}</p>
+                <button onClick={()=>this.props.plusItem(item)} className = 'cartPlus'>+</button>
+                <button onClick={()=>this.props.minusItem(item)} className = 'cartMinus'>-</button>
+                <button onClick={()=>this.props.removeItem(item.id)} className = 'cartRemove'>REMOVE</button>
             </div>)
           })
           : <h1>No chameleons were found here, try adding some!</h1>

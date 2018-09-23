@@ -22,9 +22,9 @@ class ChameleonView extends Component {
                 </b>
               </p>
               <p className='chameleonInfo'>{item.info}</p>
-              <button onClick={() => this.props.addItem(item)}>Add to Cart</button>
+              <button onClick={() => this.props.addItem(item)} className='addToCart'>Add to Cart</button>
             </div>
-            <img src={item.imgurl}/>
+            <img src={item.imgurl} className='chameleonImage'/>
           </div>)
         })
       }

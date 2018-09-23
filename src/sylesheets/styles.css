@@ -1,17 +1,18 @@
-body {
-  max-width: 100%;
+Body {
+  max-width: 100vw;
   background-image: url("../images/bg.jpg");
   overflow-x: hidden; }
 
 .navbar {
   overflow-x: hidden;
+  overflow-y: hidden;
   align-items: center;
   display: flex;
   justify-content: flex-end;
   position: sticky;
   top: 0;
   width: 100vw;
-  height: 5%;
+  height: 15%;
   max-height: 100px;
   background-color: #F4F0BB;
   padding: 10px; }
@@ -38,5 +39,96 @@ body {
     color: white; }
   .navbar .logo:hover {
     transform: scale(1.1); }
+
+.landing {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+  .landing .chameleonLandingItems {
+    margin: 50px;
+    width: 25%;
+    height: 500px;
+    background-color: #87C38F; }
+    .landing .chameleonLandingItems .landingChamImg {
+      width: 100%;
+      height: 90%;
+      object-fit: cover; }
+    .landing .chameleonLandingItems .landingChamPrice {
+      font-family: "Josefin Slab";
+      float: right;
+      margin-top: -45px;
+      margin-right: 15px; }
+    .landing .chameleonLandingItems .landingChamTitle {
+      color: black;
+      box-shadow: none;
+      font-family: "Josefin Sans";
+      margin-left: 5px; }
+
+.chameleonView {
+  margin: 15px; }
+  .chameleonView .chamInfo {
+    height: 40%;
+    width: 47.5%;
+    float: right;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px; }
+  .chameleonView .chameleonImage {
+    height: 40%;
+    width: 50%;
+    border-radius: 4px; }
+  .chameleonView .chameleonSpecies {
+    font-family: "Josefin Sans";
+    text-border: 1px solid white;
+    color: white; }
+  .chameleonView .chameleonPrice {
+    color: white;
+    font-family: "Josefin Slab";
+    font-size: 20px; }
+  .chameleonView .chameleonInfo {
+    color: white;
+    font-family: "Josefin Slab";
+    font-size: 20px; }
+  .chameleonView .addToCart {
+    font-family: "Josefin Sans";
+    font-size: 32px;
+    width: 100%;
+    height: 50px;
+    background-color: #226F54;
+    color: white;
+    border: none; }
+  .chameleonView .addToCart:hover {
+    background-color: #87C38F; }
+
+.cart {
+  margin: 15px;
+  display: flex;
+  flex-direction: column; }
+  .cart .cartSpecies, .cart .cartQuantity, .cart .cartPrice {
+    font-family: "Josefin Slab";
+    color: white;
+    font-size: 24px; }
+  .cart .cartQuantity {
+    margin: 10px; }
+  .cart .cartImage {
+    width: 50px;
+    height: 50px; }
+  .cart .cartPlus, .cart .cartMinus {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    background-color: #87C38F;
+    border: none;
+    margin: 5px;
+    height: 50px;
+    width: 50px; }
+  .cart .cartRemove {
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    border: none;
+    background-color: #DA2C38;
+    color: white;
+    margin: 10px;
+    height: 50px;
+    width: 100px; }
 
 /*# sourceMappingURL=styles.css.map */

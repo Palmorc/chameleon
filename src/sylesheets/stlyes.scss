@@ -6,21 +6,22 @@ $brown : #43291F;
 $josefin : 'Josefin Sans';
 $josefinSerif : 'Josefin Slab';
 
-body{
-    max-width: 100%;
+Body{
+    max-width: 100vw;
     background-image: url('../images/bg.jpg') ;
     overflow-x: hidden;
 }
 //Navbar
 .navbar{
     overflow-x: hidden;
+    overflow-y: hidden;
     align-items: center;
     display: flex; 
     justify-content: flex-end;
     position: sticky;
     top:0;
     width: 100vw;
-    height: 5%;
+    height: 15%;
     max-height: 100px;
     background-color: $offwhite;
     padding: 10px;
@@ -52,11 +53,126 @@ body{
     .logo:hover{
         transform: scale(1.1);
     }
-}
+};
 
 //Landing
+.landing{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+.chameleonLandingItems{
+    margin: 50px;
+    width: 25%;
+    height: 500px;
+    background-color: $lightgreen;
+    
+    .landingChamImg{
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+    }
+    .landingChamPrice{
+       font-family: $josefinSerif;
+       float:right;
+       margin-top:-45px;
+       margin-right: 15px;
+    }
+    .landingChamTitle{
+        
+        color:black;
+        box-shadow: none;
+        font-family: $josefin;
+        margin-left:5px;
+    }
+ }
+}
+
+//SingleItem
+
+.chameleonView{
+    margin: 15px;
+    .chamInfo{
+        height: 40%;
+        width: 47.5%;
+        float: right;
+        background-color: rgba(0,0,0,.6);
+        padding:15px;
+    }
+    .chameleonImage{
+        height: 40%;
+        width: 50%;
+        border-radius: 4px;
+    }
+    .chameleonSpecies{
+        font-family: $josefin;
+        text-border: 1px solid white;
+        color: white;
+    }
+    .chameleonPrice{
+        color: white;
+        font-family: $josefinSerif;
+        font-size: 20px;
+    }
+    .chameleonInfo{
+        color: white;
+        font-family: $josefinSerif;
+        font-size: 20px;
+    }
+    .addToCart{
+        font-family: $josefin;
+        font-size: 32px;
+        width: 100%;
+        height: 50px;
+        background-color: #226F54;
+        color: white;
+        border: none;
+    }
+
+    .addToCart:hover{
+        background-color: $lightgreen;
+    }
+}
+
+//Cart
+
+.cart{
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    .cartSpecies, .cartQuantity, .cartPrice{
+        font-family: $josefinSerif;
+        color: white;
+        font-size: 24px;
+    }
+    .cartQuantity{
+        margin : 10px;
+    }
+    .cartImage{
+        width: 50px;
+        height :50px;
+    }
+    .cartPlus, .cartMinus{
+        font-family: $josefin;
+        font-size: 20px;
+        background-color: $lightgreen;
+        border: none;
+        margin : 5px;
+        height: 50px;
+        width: 50px;
+    }
+    .cartRemove{
+        font-family: $josefin;
+        font-size: 20px;
+        border: none;
+        background-color: $red;
+        color: white;
+        margin: 10px;
+        height: 50px; 
+        width: 100px;
+    }
+}
 
 
-
-
+//footer
 

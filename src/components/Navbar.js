@@ -55,7 +55,7 @@ class Navbar extends Component {
       <h1 className='navName'>Chameleon</h1>
       <div className='navButtons'>
         <button onClick={this.login} className='navLogin'>{this.checkLoggedIn()}</button>
-        <Link to='/cart'><button className='navCart'>CART {this.cartCount()}</button></Link>
+        <Link to='/cart'><button className='navCart'>CART</button></Link>
       </div>
     </div>)
   }
